@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Taller.Shared.Interfaces;
 
 namespace Taller.Shared.Entities;
 
-public class Employee
+public class Employee : IEntityWithName
 {
     public int Id { get; set; }
 

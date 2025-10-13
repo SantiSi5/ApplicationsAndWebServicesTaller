@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Taller.Backend.UnitsOfWork.Interfaces;
+using Taller.Shared.DTOs;
 using Taller.Shared.Entities;
 
 namespace Taller.Backend.Controllers;
@@ -15,6 +16,28 @@ public class EmployeesController : GenericController<Employee>
         _employeesUnitOfWork = employeesUnitOfWork;
     }
 
+    [HttpGet("totalRecords")]
+    public override async Task<IActionResult> GetTotalRecordsAsync([FromQuery] PaginationDTO pagination)
+    {
+        var action = await _employeesUnitOfWork.GetTotalRecordsAsync(pagination);
+        if (action.WasSuccess)
+        {
+            return Ok(action.Result);
+        }
+        return BadRequest();
+    }
+
+    [HttpGet("paginated")]
+    public override async Task<IActionResult> GetAsync(PaginationDTO pagination)
+    {
+        var response = await _employeesUnitOfWork.GetAsync(pagination);
+        if (response.WasSuccess)
+        {
+            return Ok(response.Result);
+        }
+        return BadRequest();
+    }
+
     [HttpGet("search/{coincidence}")]
     public async Task<IActionResult> GetByCoincidence(string coincidence)
     {
@@ -24,5 +47,16 @@ public class EmployeesController : GenericController<Employee>
             return Ok(response.Result);
         }
         return NotFound(response.Message);
+    }
+
+    [HttpGet("{id}")]
+    public override async Task<IActionResult> GetAsync(int id)
+    {
+        var action = await _employeesUnitOfWork.GetAsync(id);
+        if (action.WasSuccess)
+        {
+            return Ok(action.Result);
+        }
+        return NotFound();
     }
 }

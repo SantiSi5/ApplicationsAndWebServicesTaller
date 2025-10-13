@@ -1,0 +1,12 @@
+﻿﻿@if (employee is null)
+{
+    <Loading />
+}
+else
+{
+    ﻿<MudDialog>
+        <DialogContent>
+            <FormWithName Label="Empleado:" Model="employee" OnValidSubmit="EditAsync" ReturnAction="Return" />
+        </DialogContent>
+    </MudDialog>
+}

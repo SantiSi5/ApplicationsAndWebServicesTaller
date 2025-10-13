@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36401.2 d17.14
+VisualStudioVersion = 17.14.36401.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taller.Backend", "Taller.Backend\Taller.Backend.csproj", "{714F331F-B909-4855-8B8F-2BCCA43FDAA9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taller.Shared", "Taller.Shared\Taller.Shared.csproj", "{4ECC493E-8EB6-47CE-AE19-906D6D4ADBBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taller.Frontend", "Taller.Frontend\Taller.Frontend.csproj", "{51A31673-CF76-DF5F-92A9-FBEEE6D61CD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4ECC493E-8EB6-47CE-AE19-906D6D4ADBBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ECC493E-8EB6-47CE-AE19-906D6D4ADBBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ECC493E-8EB6-47CE-AE19-906D6D4ADBBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A31673-CF76-DF5F-92A9-FBEEE6D61CD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A31673-CF76-DF5F-92A9-FBEEE6D61CD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A31673-CF76-DF5F-92A9-FBEEE6D61CD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A31673-CF76-DF5F-92A9-FBEEE6D61CD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
