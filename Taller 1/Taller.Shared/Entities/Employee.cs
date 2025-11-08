@@ -3,7 +3,7 @@ using Taller.Shared.Interfaces;
 
 namespace Taller.Shared.Entities;
 
-public class Employee : IEntityWithName
+public class Employee : IEntityWithFLS
 {
     public int Id { get; set; }
 

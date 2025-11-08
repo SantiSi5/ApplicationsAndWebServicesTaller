@@ -1,6 +1,6 @@
 ﻿using Taller.Shared.DTOs;
 
-namespace Orders.Backend.Helpers;
+namespace Taller.Backend.Helpers;
 
 public static class QueryableExtensions
 {
