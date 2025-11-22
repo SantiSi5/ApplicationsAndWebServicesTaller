@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System.Diagnostics.Metrics;
-using Taller.Backend.Repositories.Interfaces;
+﻿using Taller.Backend.Repositories.Interfaces;
 using Taller.Backend.UnitsOfWork.Interfaces;
 using Taller.Shared.DTOs;
 using Taller.Shared.Entities;
