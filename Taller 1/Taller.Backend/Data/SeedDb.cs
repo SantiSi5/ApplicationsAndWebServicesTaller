@@ -19,10 +19,10 @@ public class SeedDb
     public async Task SeedAsync()
     {
         await _context.Database.EnsureCreatedAsync();
+        await CheckCountriesFullAsync();
+        // await CheckCountriesAsync();
         await CheckEmployeesFullAsync();
         await CheckEmployeesAsync();
-        await CheckCountriesFullAsync();
-        await CheckCountriesAsync();
         await CheckRolesAsync();
         await CheckUserAsync("1010", "Santiago", "Sierra", "santisierra1212@gmail.com", "317 396 4939", "Calle Luna Calle Sol", UserType.Admin);
     }
